@@ -3,6 +3,7 @@ const http = require('http');
 const numCPUs = require('os').cpus().length;
 
 if (cluster.isMaster) {
+  console.log(`numCPUs: ${numCPUs}`);
   console.log(`Leader ${process.pid} is running`);
 
   // Fork workers.
@@ -14,7 +15,8 @@ if (cluster.isMaster) {
     console.log(`worker ${worker.process.pid} died`);
   });
 } else {
-  require('./server.js');
+  // require('./koa-server.js');
+  require('./express-server.js');
 
   console.log(`Worker ${process.pid} started`);
 }

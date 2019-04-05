@@ -9,6 +9,9 @@ Source repo contains a basic REST API concerning a 'forum' database which contai
 
 Great practical example after reading [Building Microservices: Designing Fine-Grained Systems](https://samnewman.io/books/building_microservices/)
 
+## Modifications
+  First time using Koa.js so refactored server,js file in 1-no-container directory into an Express version as well. 
+
 ## AWS Components Touched & Their Use: 
   - Elastic Container Registry (ECR) 
     - registers containers in AWS as well as acts as a repository for container images
